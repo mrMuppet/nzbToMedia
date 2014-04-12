@@ -81,7 +81,7 @@ def main(inputDirectory, inputName, inputCategory, inputHash, inputID):
     for dirpath, dirnames, filenames in os.walk(inputDirectory):
         if single:
             dirnames[:] = [] 
-            filenames[:] = [filenames]  # we just want to work with this one file if single = True
+            filenames[:] = [filename]  # we just want to work with this one file if single = True
         logger.debug("Found %s files in %s", str(len(filenames)), dirpath)
         for file in filenames:
             filePath = os.path.join(dirpath, file)
